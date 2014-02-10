@@ -1,4 +1,4 @@
-/* exported average,longestWord,squirrelParty,fibonacci,replaceZero,melt,meltAgain, startLastSix,  ifUppercase, calcInterest, stndDev, variance, appendIfOdd, capVowels, sum, diffOfsum, sumOfsquare, pippo, pluto */
+/* exported average,factorial,longestWord,squirrelParty,fibonacci,replaceZero,melt,meltAgain, startLastSix,  ifUppercase, calcInterest, stndDev, variance, appendIfOdd, capVowels, sum, diffOfsum, sumOfsquare, pippo, pluto */
 
 'use strict';
 
@@ -173,4 +173,12 @@ function longestWord(x){
     }
   }
   return word[0];
+}
+
+function factorial(x){
+  var total = 1;
+  for(var i = 0; i < x; i++){
+    total = total * (x-i);
+  }
+  return total;
 }

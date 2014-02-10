@@ -1,4 +1,4 @@
-/* global test,longestWord,squirrelParty,fibonacci,replaceZero, melt,meltAgain, startLastSix, ifUppercase, calcInterest, stndDev, variance, average, capVowels, pippo, pluto, deepEqual, appendIfOdd, ok, sumOfsquare, sum, diffOfsum: false  */
+/* global test,factorial,longestWord,squirrelParty,fibonacci,replaceZero, melt,meltAgain, startLastSix, ifUppercase, calcInterest, stndDev, variance, average, capVowels, pippo, pluto, deepEqual, appendIfOdd, ok, sumOfsquare, sum, diffOfsum: false  */
 
 'use strict';
 
@@ -102,4 +102,9 @@ test('function#squirrelParty', function(){
 test('function#longestWord', function(){
 
   deepEqual(longestWord('kristin and giovanni are in love'), 'giovanni' , 'The longest word in the sentence is giovanni');
+});
+
+test('function#factorial', function(){
+
+  deepEqual(factorial(8), 40320 , 'The factorial of 8 should be 40.320');
 });
