@@ -1,4 +1,4 @@
-/* exported average,replaceZero,melt,meltAgain, startLastSix,  ifUppercase, calcInterest, stndDev, variance, appendIfOdd, capVowels, sum, diffOfsum, sumOfsquare, pippo, pluto */
+/* exported average,longestWord,squirrelParty,fibonacci,replaceZero,melt,meltAgain, startLastSix,  ifUppercase, calcInterest, stndDev, variance, appendIfOdd, capVowels, sum, diffOfsum, sumOfsquare, pippo, pluto */
 
 'use strict';
 
@@ -142,4 +142,35 @@ function replaceZero(x){
   var newArray = _.remove(x, function(number){return number === 0; });
   console.log(newArray);
   return x;
+}
+
+function fibonacci(num){
+  var array = [1,2];
+  for(var i = 0; i < num-2; i++){
+    var next = array[i]+array[i+1];
+    array.push(next);
+  }
+  var newArray = _.remove(array, function(x){return x%2 === 0; });
+  var sum = 0;
+  for (var k = 0; k < newArray.length; k++){
+    sum += newArray[k];
+  }
+  return sum;
+}
+
+function squirrelParty(x,y){
+  var result = (x >= 40 || (x >= 10 && y === 'sun'))? true : false;
+  return result;
+}
+
+function longestWord(x){
+  debugger;
+  var array = x.split(' ');
+  var word = ['x'];
+  for (var i = 0; i < array.length; i++){
+    if (array[i].length >= word[0].length){
+      word.splice(0,1,array[i]);
+    }
+  }
+  return word[0];
 }

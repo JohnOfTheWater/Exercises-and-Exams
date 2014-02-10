@@ -31,7 +31,6 @@ test('Person#eat', function(){
   var f2 = new Food('Pasta', 400);
   var f3 = new Food('Taco', 250);
   var f4 = new Food('Fries', 150);
-  debugger;
   var f5 = new Food('Cake', 500);
 
   p1.eat(f1, 2);
@@ -67,8 +66,8 @@ test('Person#exercise', function(){
   /* 3500 calories per 1 pound of weight */
   /* Round weight to nearest integer */
 
-  deepEqual(p1.weight, 171, 'Bob lost weight');
-  deepEqual(p2.weight, 100, 'Liz lost weight');
+  deepEqual(p1.weight, 175, 'Bob lost weight');
+  deepEqual(p2.weight, 101, 'Liz lost weight');
 });
 
 /* function getter crazyString(){} */

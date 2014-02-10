@@ -11,14 +11,14 @@ var Person = (function(){
     this.foods = [];
   }
 
-  Object.defineProperty(Person.prototype, 'crazyString', {
+  Object.defineProperty(Person.prototype, 'crazyString',{
     get: function(){
+      debugger;
       var foods = _.uniq(this.foods).reverse();
-      var words = _.map(foods, function(food){
-        return food.name.length % 2 === 0 ? food.name.toLowerCase() : food.name.toUpperCase();
+      var newArray = _.map(foods, function(x){
+        return x.name.length %2 === 0 ? x.name.toLowerCase() : x.name.toUpperCase();
       });
-
-      return words.join('--');
+      return newArray.join('--');
     }
   });
 
@@ -29,9 +29,9 @@ var Person = (function(){
     this.weight += Math.round(pounds);
   };
 
-  Person.prototype.exercise = function(type, minutes){
+  Person.prototype.exercise = function(x,y){
     var burnRate;
-    switch(type){
+    switch(x){
       case 'Swim':
         burnRate = this.gender === 'Male' ? 900 : 700;
         break;
@@ -39,10 +39,11 @@ var Person = (function(){
         burnRate = this.gender === 'Male' ? 700 : 500;
     }
 
-    var calories = burnRate * (minutes/60);
+    var calories = burnRate * (y/60);
     var pounds = calories/3500;
     this.weight -= Math.round(pounds);
   };
+
 
   return Person;
 })();

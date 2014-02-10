@@ -1,4 +1,4 @@
-/* global test,replaceZero, melt,meltAgain, startLastSix, ifUppercase, calcInterest, stndDev, variance, average, capVowels, pippo, pluto, deepEqual, appendIfOdd, ok, sumOfsquare, sum, diffOfsum: false  */
+/* global test,longestWord,squirrelParty,fibonacci,replaceZero, melt,meltAgain, startLastSix, ifUppercase, calcInterest, stndDev, variance, average, capVowels, pippo, pluto, deepEqual, appendIfOdd, ok, sumOfsquare, sum, diffOfsum: false  */
 
 'use strict';
 
@@ -85,4 +85,21 @@ test('function#meltAgain', function(){
 test('function#replaceZero', function(){
 
   deepEqual(replaceZero([1,3,0,4,0,0,7,8]), [1,3,4,7,8], 'the new array has no zeroes');
+});
+
+test('function#fibonacci', function(){
+
+  deepEqual(fibonacci(32), 4613732 , 'the sum of ithe even numbers from this fibonacci sequence is 4.613.732');
+});
+
+test('function#squirrelParty', function(){
+
+  deepEqual(squirrelParty(50, 'mon'), true , 'The squirrel party should be a succes!');
+  deepEqual(squirrelParty(10, 'sun'), true , 'this party is good');
+  deepEqual(squirrelParty(9, 'sun'), false , 'this party is soooo disappointing!');
+});
+
+test('function#longestWord', function(){
+
+  deepEqual(longestWord('kristin and giovanni are in love'), 'giovanni' , 'The longest word in the sentence is giovanni');
 });
